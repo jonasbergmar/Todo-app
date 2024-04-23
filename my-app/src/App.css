@@ -1,0 +1,194 @@
+/* Rest of your CSS styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #121212;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+  margin-top: 215px;
+  padding: 0px 160px;
+}
+
+.burgerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px;
+  width: auto;
+}
+
+i {
+  scale: 150%;
+  color: #c6c6b5;
+}
+
+.imageGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 300px;
+  height: auto;
+  margin-top: 40px;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  line-height: 150%;
+  color: #c6c6b5;
+  margin: 0px 16px;
+  padding: 4px 0px;
+}
+
+.navLink {
+  font-size: 24px;
+  text-align: center;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.5px;
+  border-radius: 100px;
+  bottom: 0;
+  left: 0;
+  background-color: #c6c6b5;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navLink.active {
+  color: #c6c6b5;
+  font-weight: bold;
+}
+
+.logo {
+  margin: 16px;
+  width: 100px;
+  height: auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #121212be;
+}
+
+.navContainer {
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 160px;
+}
+
+.linkContainer {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+}
+.linkContainer.show {
+  display: flex;
+}
+
+.heroImage {
+  width: 300px;
+  height: auto;
+}
+
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  align-self: stretch;
+  height: auto;
+  width: auto;
+  margin: 0px 32px;
+}
+
+.heroCta {
+  margin: 16px;
+}
+
+h1 {
+  color: var(--Text, #e2e2d9);
+
+  /* Display 2/SemiBold */
+  font-family: "massilia", sans-serif;
+
+  font-size: var(--Typeface-Size-Display-2, 69px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%; /* 82.8px */
+}
+
+h2 {
+  color: var(--Text-Variant, #c6c6b5);
+
+  /* Subheading/SemiBold */
+  font-family: "massilia", sans-serif;
+  font-size: var(--Typeface-Size-Subheading, 33px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 42.9px */
+}
+
+p {
+  color: var(--Primary, #dbdbd0);
+
+  /* Body/Medium */
+  font-family: "Roboto", sans-serif;
+  font-size: var(--Typeface-Size-Body, 16px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
