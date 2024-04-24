@@ -6,22 +6,19 @@ const Todo = () => {
   const [showCompletionMessage, setShowCompletionMessage] = useState(false);
 
   useEffect(() => {
-    // Retrieve tasks from localStorage when the component mounts
-    const storedTasks = localStorage.getItem("tasks");
+    const storedTasks = sessionStorage.getItem("tasks");
     if (storedTasks) {
       setTasks(JSON.parse(storedTasks));
     }
   }, []);
 
   useEffect(() => {
-    // Save tasks to localStorage whenever tasks state changes
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    sessionStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   useEffect(() => {
     const allTasksCompleted =
       tasks.length > 0 && tasks.every((task) => task.completed);
-    // Show completion message when all tasks are completed
     if (allTasksCompleted) {
       setShowCompletionMessage(true);
     } else {
