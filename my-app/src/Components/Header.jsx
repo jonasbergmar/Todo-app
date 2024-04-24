@@ -23,13 +23,16 @@ const Header = () => {
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
+    setIsClicked(false);
   };
 
   return (
     <>
       <div className="header">
         <div className="navContainer">
-          <Link to="/">LOGO</Link>
+          <Link to="/" onClick={() => handleLinkClick("/")}>
+            YourTodos
+          </Link>
           <div className="buttonsContainer">
             <BurgerBtn handleClick={toggleClick} isClicked={isClicked} />
           </div>
