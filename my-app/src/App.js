@@ -11,7 +11,6 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Footer footerTitle={"Footer"} />
-
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/About" element={<About />} />

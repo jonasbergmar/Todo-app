@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 
 const Todo = () => {
-  const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
   const [showCompletionMessage, setShowCompletionMessage] = useState(false);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || []
+  );
 
   useEffect(() => {
-    const storedTasks = sessionStorage.getItem("tasks");
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks));
+    if (tasks) {
+      setTasks(tasks);
     }
-  }, []);
+  }, [tasks]);
 
   useEffect(() => {
-    sessionStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   useEffect(() => {
